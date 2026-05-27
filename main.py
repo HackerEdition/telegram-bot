@@ -1,10 +1,10 @@
 import os
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 TOKEN = os.getenv("TOKEN")
 
-DIRECT_LINK = "https://t.me/ADSRBX_bot/ADSRBX"
+WEB_APP_URL = "https://adsrbx.gt.tc/az/"
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -13,13 +13,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [
             InlineKeyboardButton(
                 "🚀 Başla",
-                url=DIRECT_LINK
+                web_app=WebAppInfo(url=WEB_APP_URL)
             )
         ]
     ]
 
     await update.message.reply_text(
-        "👋 Salam!\n\nBaşlamaq üçün düyməyə bas 👇",
+        "👋 Salam!\n\nBaşlamaq üçün aşağıdakı düyməyə bas 👇",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
