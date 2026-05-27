@@ -4,7 +4,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 TOKEN = os.getenv("TOKEN")
 
-WEB_APP_URL = "https://t.me/ADSRBX_bot/ADSRBX"
+WEB_APP_URL = "https://adsrbx.gt.tc/az/"
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
